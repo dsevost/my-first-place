@@ -13,7 +13,7 @@ import static io.vertx.core.http.HttpHeaders.CONTENT_TYPE;
 
 public class HttpApplication extends AbstractVerticle {
 
-  private static final String template = "Hello, %s!";
+  private static final String template = "Hello, %s!!!";
 
   private boolean online = false;
 
@@ -57,7 +57,7 @@ public class HttpApplication extends AbstractVerticle {
     }
 
     JsonObject response = new JsonObject()
-      .put("content", String.format(template, name) + "!");
+      .put("content", String.format(template, name));
 
     rc.response()
       .putHeader(CONTENT_TYPE, "application/json; charset=utf-8")
